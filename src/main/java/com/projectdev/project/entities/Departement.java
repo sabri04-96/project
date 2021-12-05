@@ -31,8 +31,14 @@ public class Departement {
 	@OneToMany(mappedBy = "departement")
 	private Set<JobHistory> histories;
 
-	public Departement(long departmentId, String departementName, Employee managerId, Location location,
-			Set<Employee> employees, Set<JobHistory> histories) {
+	public Departement() {
+		super();
+	}
+	
+	
+
+	public Departement(long departmentId, String departementName, Location location, Set<Employee> employees,
+			Set<JobHistory> histories) {
 		super();
 		this.departmentId = departmentId;
 		this.departementName = departementName;
@@ -41,9 +47,7 @@ public class Departement {
 		this.histories = histories;
 	}
 
-	public Departement() {
-		super();
-	}
+
 
 	public long getDepartmentId() {
 		return departmentId;
