@@ -17,16 +17,18 @@ public class EmployeeWebController {
 		this.empRepo = empRepo;
 	}
 
-
 	@RequestMapping(value = "/web/employees", method = RequestMethod.GET)
 	public String listEmployee(Model model) {
 		model.addAttribute("employees", this.empRepo.findAll());
 
-		return "employee";
+		return "employee/employee";
 	}
-	
-	
 
-	
+	@RequestMapping(value = "/web/employees-add", method = RequestMethod.GET)
+	public String addEmployee(Model model) {
+
+		model.addAttribute("employee", this.empRepo.findById(null));
+		return "employee/employee";
+	}
 
 }
