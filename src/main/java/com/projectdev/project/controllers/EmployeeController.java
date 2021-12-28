@@ -95,7 +95,7 @@ public class EmployeeController {
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-	}   
+	}
 
 	@DeleteMapping("/Employees")
 	public ResponseEntity<HttpStatus> deleteAllEmployees() {
