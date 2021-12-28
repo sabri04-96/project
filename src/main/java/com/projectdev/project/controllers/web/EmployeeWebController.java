@@ -18,12 +18,15 @@ public class EmployeeWebController {
 	}
 
 
-
 	@RequestMapping(value = "/web/employees", method = RequestMethod.GET)
-	public String pageEmployee(Model model) {
+	public String listEmployee(Model model) {
 		model.addAttribute("employees", this.empRepo.findAll());
 
 		return "employee";
 	}
+	
+	
+
+	
 
 }
