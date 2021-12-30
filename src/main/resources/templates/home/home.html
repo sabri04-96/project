@@ -1,47 +1,38 @@
-<html>
-    
-<head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>k</title> 
-</head>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<body>
-	
-	<br><br><br><br><br><br>
-		
-	<div class='container container-fluid'>
-		
-		<div align='center' class="jumbotron">
-			<br><br><br>
-			<h1 class="display-3">Welcome Administrator !</h1>
-			<br>
-			<hr class="my-4">
-			<br>
-			<p class="lead">
-				<a class="btn btn-success btn-lg " th:href="@{/web/employees}" role="button"><strong>Manage Employees </strong></a> &nbsp;&nbsp;&nbsp;
-				<a class="btn btn-success btn-lg " th:href="@{/managers/manager-index}" role="button"><strong>Manage Departement </strong></a>
-			</p>
-			<div align='center' >
-				<p class='lead' >
-					<a class="btn btn-success btn-lg " th:href="@{/admins/admin-index}" role="button"><strong>Manage Jobs</strong></a>
-									<a class="btn btn-success btn-lg " th:href="@{/admins/admin-index}" role="button"><strong>Manage Regions</strong></a>	
-				</p>
-			</div>
-			<br><br><br>
+<div class="container">
+    <div class="row">
+		<div class="span12">
+			<form class="form-horizontal" action='/web/employees' method="POST">
+			  <fieldset>
+			    <div id="legend">
+			      <legend class="">Login</legend>
+			    </div>
+			    <div class="control-group">
+			      <!-- Username -->
+			      <label class="control-label"  for="username">Username</label>
+			      <div class="controls">
+			        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+			      </div>
+			    </div>
+			    <div class="control-group">
+			      <!-- Password-->
+			      <label class="control-label" for="password">Password</label>
+			      <div class="controls">
+			        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+			      </div>
+			    </div>
+			    <div class="control-group">
+			      <!-- Button -->
+			      <div class="controls">
+			        <button class="btn btn-success">Login</button>
+			      </div>
+			    </div>
+			  </fieldset>
+			</form>
 		</div>
-		
 	</div>
-	
-	<br><br><br><br><br>
-	
-	
-</body>
-</html>
-
-
-
-
-
-
-
+</div>
