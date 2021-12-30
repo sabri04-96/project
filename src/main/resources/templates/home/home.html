@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-
-<html xmlns:th = "http://www.thymeleaf.org">
-
+<html>
+    
 <head>
-	<title>Welcome Home</title>
-	<meta charset="UTF-8">
-	<title></title>
-	<div th:replace = "layouts :: stylish"></div>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>k</title> 
 </head>
+
 <body>
 	
 	<br><br><br><br><br><br>
@@ -21,7 +19,7 @@
 			<hr class="my-4">
 			<br>
 			<p class="lead">
-				<a class="btn btn-success btn-lg " th:href="@{/employees/employee-index}" role="button"><strong>Manage Employees </strong></a> &nbsp;&nbsp;&nbsp;
+				<a class="btn btn-success btn-lg " th:href="@{/web/employees}" role="button"><strong>Manage Employees </strong></a> &nbsp;&nbsp;&nbsp;
 				<a class="btn btn-success btn-lg " th:href="@{/managers/manager-index}" role="button"><strong>Manage Departement </strong></a>
 			</p>
 			<div align='center' >
@@ -37,7 +35,6 @@
 	
 	<br><br><br><br><br>
 	
-	<div th:replace = "layouts :: javascript"></div>
 	
 </body>
 </html>

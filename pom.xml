@@ -10,8 +10,8 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.projectdev</groupId>
-	<artifactId>project</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>app</artifactId>
+	<version>1</version>
 	<name>project</name>
 	<description>project Dev</description>
 	<properties>

@@ -2,9 +2,11 @@ package com.projectdev.project.controllers.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.projectdev.project.entities.Employee;
 import com.projectdev.project.repositories.Employeerepo;
 
 @Controller
@@ -24,11 +26,12 @@ public class EmployeeWebController {
 		return "employee/employee";
 	}
 
-	@RequestMapping(value = "/web/employees-add", method = RequestMethod.GET)
-	public String addEmployee(Model model) {
+	@RequestMapping(value = "/web/add-employee")
+	public String addEmployee(@ModelAttribute("employee") final Employee employee, final Model model) {
+		this.empRepo.save(employee);
+		model.addAttribute("msg", "This employee has been created successfully");
+		model.addAttribute("msgColour", "success");
 
-		model.addAttribute("employee", this.empRepo.findById(null));
-		return "employee/employee";
+		return "employee/employees-add";
 	}
-
 }
